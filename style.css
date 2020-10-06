@@ -109,4 +109,12 @@ body {
 	display: flex;
 	justify-content: center;
 	cursor: pointer;
+	background-color: white;
+}
+#qty-decrement,
+#qty-increment {
+	cursor: pointer;
+}
+#addToCartBtn:disabled {
+	opacity: 0.5;
 }
