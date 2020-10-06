@@ -5,7 +5,8 @@ let qtyCnt = document.getElementById("qty-count");
 let qtyIncBtn = document.getElementById("qty-increment");
 let qtyDecBtn = document.getElementById("qty-decrement");
 let quantity = parseInt(qtyCnt.innerText);
-
+let price = document.getElementById("price");
+let productPrice = 2599;
 checkPincodeBtn.onclick = () => {
 	let pincode = pincodeInputBox.value;
 	console.log(pincode);
@@ -16,8 +17,10 @@ checkPincodeBtn.onclick = () => {
 
 qtyIncBtn.onclick = (e) => {
 	qtyCnt.innerText = ++quantity;
+	price.innerText = quantity * 2599;
 };
 
 qtyDecBtn.onclick = (e) => {
 	if (quantity > 1) qtyCnt.innerText = --quantity;
+	price.innerText = quantity * 2599;
 };
